@@ -1,0 +1,191 @@
+/* ===== General Styles ===== */
+:root {
+    --primary: #E63946; /* Vibrant red */
+    --secondary: #457B9D; /* Sophisticated blue */
+    --accent: #A8DADC; /* Soft teal */
+    --dark: #1D3557; /* Navy blue */
+    --light: #F1FAEE; /* Light cream */
+    --gray: #6C757D;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--primary);
+    font-weight: 500;
+  }
+  
+  /* ===== Container & Header ===== */
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  #title {
+    text-align: center;
+    color: var(--dark);
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  #title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--primary);
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .form-group:hover {
+    border-color: var(--accent);
+    box-shadow: 0 2px 8px rgba(69, 123, 157, 0.1);
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 1rem;
+  }
+  
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  input[type="text"]:focus,
+  select:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+  }
+  
+  input[type="text"]::placeholder {
+    color: var(--gray);
+    opacity: 0.6;
+  }
+  
+  /* Dropdown Styling */
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231D3557'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* Submit Button */
+  #submit {
+    width: 100%;
+    padding: 16px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  #submit:hover {
+    background: #c1121f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.2);
+  }
+  
+  /* ===== Responsive Design ===== */
+  @media (max-width: 768px) {
+    .container {
+      padding: 30px;
+    }
+    
+    #title {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      padding: 15px;
+    }
+    
+    .container {
+      padding: 20px;
+    }
+    
+    .form-group {
+      padding: 16px;
+    }
+    
+    input[type="text"],
+    select {
+      padding: 12px 14px;
+    }
+  }
+  .email {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .email:hover {
+    border-color: var(--accent);
+    box-shadow: 0 2px 8px rgba(69, 123, 157, 0.1);
+  }
+  
+  .email label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 1rem;
+  }
